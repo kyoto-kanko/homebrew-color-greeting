@@ -9,7 +9,7 @@ class ColorGreeting < Formula
 
   resource "colorize" do
     url "https://rubygems.org/downloads/colorize-1.1.0.gem"
-    sha256 "7b51171d0c3b6bd7e8a84f75ad7b0a520bc3f5e4d1fe6e8d5efadc6e58202a30"
+    sha256 "30b5237f0603f6662ab8d1fc2bd4a96142b806c6415d79e45ef5fdc6a0cfc837"
   end
 
   def install
