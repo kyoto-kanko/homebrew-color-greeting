@@ -14,14 +14,19 @@ class ColorGreeting < Formula
 
   def install
     ENV["GEM_HOME"] = libexec
-
+  
     resources.each do |r|
       r.fetch
       system "gem", "install", r.cached_download, "--ignore-dependencies",
              "--no-document", "--install-dir", libexec
     end
-
-    bin.install libexec/"bin/hello"
+  
+    # Instead of bin.install libexec/"bin/hello"
+    # Use the line below to install the 'hello' script directly from your project's bin directory
+    bin.install "bin/hello"
+  
+    # This sets up the environment so that when the 'hello' script is run, it knows where to find its Ruby gems.
     bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
   end
+  
 end
