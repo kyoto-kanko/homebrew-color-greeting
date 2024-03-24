@@ -21,7 +21,7 @@ class ColorGreeting < Formula
              "--no-document", "--install-dir", libexec
     end
 
-    bin.install libexec/"bin/color_greeting"
+    bin.install libexec/"bin/hello"
     bin.env_script_all_files(libexec/"bin", GEM_HOME: ENV["GEM_HOME"])
   end
 end
